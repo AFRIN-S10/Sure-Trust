@@ -73,7 +73,10 @@ SELECT * FROM datasheet WHERE dept = 'BME'
 - Functions can manipulate data values, perform string manipulation, date arithmetic, etc.
 - Aggregates perform calculations on sets of values and return a single result.
   ```sql
-  SELECT AVG(price) FROM Products;
+  SELECT AVG(price) FROM Products
+   SELECT MIN(price) FROM Products;
+   SELECT MAX(price) FROM Products;
+   SELECT COUNT(price) FROM Products;;
   ```
 
 ## Views
