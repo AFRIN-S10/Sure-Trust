@@ -8,8 +8,8 @@
 
 ## Basic Syntax
 
-- **SELECT:** Specifies the columns you want to retrieve from the table.
-- **FROM:** Specifies the table from which you want to retrieve the data.
+- **SELECT:** Specifies the columns that want to retrieve from the table.
+- **FROM:** Specifies the table from which want to retrieve the data.
 - **ORDER BY:** Arranges the result set in ascending (ASC) or descending (DESC) order based on the specified column(s).
 
 ```sql
@@ -139,3 +139,49 @@ SELECT * FROM datasheet WHERE dept = 'BME'
   FROM Employees;
   ```
 
+# SQL JOINs
+
+- SQL JOINs are used to combine rows from two or more tables based on a related column between them. 
+- Bringing the two tables by same key based on identifier
+- There are several types of JOINs:
+  
+## 1. INNER JOIN
+- Inner join returns the rows that have matching values in both tables
+- for eg: it could only bring the values from the tables which has same value
+
+```sql
+SELECT columns
+FROM table1
+INNER JOIN table2
+ON table1.column = table2.column;
+```
+
+## 2. LEFT JOIN
+- LEFT  join matches the data of the first table or with the data in the second table
+- If the data is matched, the records are combined, otherwise, NULL is returned
+
+```sql
+SELECT columns
+FROM table1
+LEFT JOIN table2
+ON table1.column = table2.column;
+```
+
+## 3. RIGHT JOIN 
+- RIGHT join matches the data of the second table or  with the data in the first table
+```sql
+SELECT columns
+FROM table1
+RIGHT JOIN table2
+ON table1.column = table2.column;
+```
+
+## 4. FULL OUTER JOIN
+- Outer join returns all rows tables either it has match or not
+
+```sql
+SELECT columns
+FROM table1
+FULL OUTER JOIN table2
+ON table1.column = table2.column;
+```
